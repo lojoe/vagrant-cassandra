@@ -1,7 +1,0 @@
----
--
-    name: Install Python development libraries
-    yum: pkg=python-devel state=present
--
-    name: Install pip package manager
-    yum: pkg=python-pip state=present
