@@ -1,0 +1,10 @@
+---
+-   hosts: cassandra
+    vars:
+        # Change this to match the RPM copied to roles/java/files
+        java_rpm: jre-8u60-linux-x64.rpm
+    roles:
+        - common
+        - java
+        # Change this to the version you wish to install
+        - cassandra20

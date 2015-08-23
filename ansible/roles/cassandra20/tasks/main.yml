@@ -1,0 +1,19 @@
+---
+-
+    name: Install Datastax yum repository
+    copy: src=datastax.repo dest=/etc/yum.repos.d
+-
+    name: Install Datastax DSC 2.0 platform
+    yum: pkg=dsc20 state=present
+-
+    name: Install Apache Cassandra 2.0
+    yum: pkg=cassandra20 state=present
+-
+    name: Install /etc/cassandra/conf/cassandra-rack.properties
+    copy: src=cassandra-rackdc.properties dest=/etc/cassandra/conf/
+-
+    name: Install /etc/cassandra/conf/cassandra.yaml
+    template: src=cassandra.yaml dest=/etc/cassandra/conf/
+-
+    name: Start Apache Cassandra service
+    service: name=cassandra state=started

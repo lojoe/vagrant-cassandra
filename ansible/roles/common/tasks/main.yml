@@ -1,0 +1,5 @@
+---
+-
+    # Ansible produces an error with some modules without this
+    name: Install Python SELinux bindings
+    yum: pkg=libselinux-python state=present

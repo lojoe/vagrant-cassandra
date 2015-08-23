@@ -1,0 +1,5 @@
+# Vagrant
+.vagrant/
+
+# We can't include the Orcale Java JRE
+ansible/roles/java/files/j*

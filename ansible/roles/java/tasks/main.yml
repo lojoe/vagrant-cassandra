@@ -1,0 +1,10 @@
+---
+-
+    name: Copy Sun Java RPM to /tmp
+    copy: src={{ java_rpm }} dest=/tmp
+-
+    name: Install Sun Java
+    yum: pkg=/tmp/{{ java_rpm }} state=present
+-
+    name: Remove Sun Java RPM from /tmp
+    file: name=/tmp/{{ java_rpm }} state=absent
